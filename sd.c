@@ -26,6 +26,10 @@ int main(){
 			printf("\n %c %d - > (vowel) ", a[i], i);
 		}
 		
+		else if(a[i] == ' ' || a[i] == '\0'){
+			printf("\n  %c %d, a[i], i);
+		}
+		
 		else{
 			printf("\n %c %d - > consonant", a[i], i);// strcmp inside printf works
 			//printf("\n %c %d", b[i], i);
