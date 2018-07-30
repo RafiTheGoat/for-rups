@@ -2,7 +2,7 @@
 #include<string.h>
 
 int main(){
-	int i,j,c=0;// c will take garbage value if not initialized with zero
+	int i,j;//,c=0; c will take garbage value if not initialized with zero
 
 	
 	char a[100], b[100];
@@ -27,7 +27,10 @@ int main(){
 		if(a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u'){ // 
 			printf("\n %c %d - > (vowel) ", a[i], i);
 		}
-		printf("\n %c %d", a[i], i);// strcmp inside printf works
+		else{
+			printf("\n %c %d", a[i], i);// strcmp inside printf works
+		}
+		
 
 	}
 	printf("\n difference is: %d \n",strcmp(a,b));// strcmp inside printf works
