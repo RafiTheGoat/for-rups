@@ -1,6 +1,17 @@
 #include<stdio.h>
 #include<string.h>
 #include<ctype.h>
+void string_upper(char string[]) // self made function to convert to uppercase
+{
+	int k=0;
+	while(string[k] !='\0')
+	{
+			if(string[k]>='a' && string[k]<='z'){
+				string[k] =  string[k] - 32;
+			}
+			k++;
+	}
+}
 
 int main(){
 	int i,j;//,c=0;// c will take garbage value if not initialized with zero
@@ -58,12 +69,16 @@ int main(){
 	printf("\n difference is: %d \n",strcmp(a,b));// strcmp inside printf works
 	printf("\n concatenated: %s \n", strcat(a,b));
 	strcpy(c,strcat(a,b));
-	printf(" stored in c: %s ",c );
-	//printf("%s",strupr(c));  does not work on mac or linux, have to build the function
+	printf("copy of it stored in c: %s ",c );
+	string_upper(c);
+	printf("\n uppercase of the string: %s", c);
+	//printf("%s",strupr(c));
 
 	//printf("\nnumber of words: %d", c);
 	//printf("\n");
 	//printf("\n %c", a[2]);
 	//printf("\n");
 	//printf("")
+	return 0;
 }
+
