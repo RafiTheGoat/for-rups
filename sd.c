@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h>
 
 int main(){
 	int i,j;//,c=0;// c will take garbage value if not initialized with zero
@@ -25,6 +26,11 @@ int main(){
 		if(a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u'){ // 
 			printf("\n %c %d - > (vowel) ", a[i], i);
 		}
+		else if(a[i] == ' ' || a[i] == '\0')
+		{
+			printf("\n  %c %d", a[i], i);
+		}
+
 		
 		else{
 			printf("\n %c %d - > consonant", a[i], i);// strcmp inside printf works
@@ -53,7 +59,7 @@ int main(){
 	printf("\n concatenated: %s \n", strcat(a,b));
 	strcpy(c,strcat(a,b));
 	printf(" stored in c: %s ",c );
-	printf("%s",strupr(c));
+	//printf("%s",strupr(c));
 
 	//printf("\nnumber of words: %d", c);
 	//printf("\n");
