@@ -2,12 +2,10 @@
 #include<string.h>
 
 int main(){
-	int i,j,c=0;// c will take garbage value if not initialized with zero
+	int i,j;//,c=0;// c will take garbage value if not initialized with zero
 
 	
-	char a[100], b[100];
-	char c[100];
-
+	char a[100], b[100], c[100];
 	printf("enter string: ");
 	gets(a);
 	printf("enter string: ");
@@ -27,13 +25,35 @@ int main(){
 		if(a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u'){ // 
 			printf("\n %c %d - > (vowel) ", a[i], i);
 		}
-		printf("\n %c %d", a[i], i);// strcmp inside printf works
+		
+		else{
+			printf("\n %c %d - > consonant", a[i], i);// strcmp inside printf works
+			//printf("\n %c %d", b[i], i);
+
+		}
+		
+
+	}
+
+	for(i=0; i<=strlen(b); i++)
+	{
+		if(b[i] == 'a' || b[i] == 'e' || b[i] == 'i' || b[i] == 'o' || b[i] == 'u'){ // 
+		printf("\n %c %d - > (vowel) ", b[i], i);
+
+		}
+		else{
+			printf("\n %c %d - > consonant", b[i], i);// strcmp inside printf works
+			//printf("\n %c %d", b[i], i);
+
+		}
+		
 
 	}
 	printf("\n difference is: %d \n",strcmp(a,b));// strcmp inside printf works
 	printf("\n concatenated: %s \n", strcat(a,b));
 	strcpy(c,strcat(a,b));
 	printf(" stored in c: %s ",c );
+	printf("%s",strupr(c));
 
 	//printf("\nnumber of words: %d", c);
 	//printf("\n");
