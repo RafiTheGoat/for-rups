@@ -59,7 +59,7 @@ int main(){
 	printf("\n concatenated: %s \n", strcat(a,b));
 	strcpy(c,strcat(a,b));
 	printf(" stored in c: %s ",c );
-	//printf("%s",strupr(c));
+	//printf("%s",strupr(c));  does not work on mac or linux, have to build the function
 
 	//printf("\nnumber of words: %d", c);
 	//printf("\n");
